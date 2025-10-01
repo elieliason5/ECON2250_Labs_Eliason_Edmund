@@ -397,15 +397,30 @@ There is website that host a collection of beautiful charts you might want to vi
 *Visualization replication 1* \AddToHookNext{env/Highlighting/begin}{\small}
 
 ```{r, echo=T, eval=T}
-#| label: r graph gallery replication 1
-
+# library
+library(ggplot2)
+ 
+# The iris dataset is provided natively by R
+#head(iris)
+ 
+# basic scatterplot
+ggplot(cpsemployed, aes(x=age, y=earnwk)) + 
+    geom_point()
 ```
 
 *Visualization replication 2* \AddToHookNext{env/Highlighting/begin}{\small}
 
 ```{r, echo=T, eval=T}
 #| label: r graph gallery replication 2
-
+# library
+library(ggplot2)
+ 
+# Iris dataset is natively provided by R
+#head(iris)
+ 
+# use options!
+ggplot(cpsemployed, aes(x=age, y=earnwk)) + 
+    geom_point(color="orange",fill="#69b3a2",shape=21,alpha=0.11,size=6,stroke = 2)
 ```
 
 # Wrapping up
@@ -441,7 +456,7 @@ To submit your assignment:
 # Grading
 
 | Component                                                          | Points |
-|:---------------------------------------------------------|:-------------|
+|:----------------------------------------------------|:------------------|
 | Exercise 1                                                         | 5      |
 | Exercise 2                                                         | 5      |
 | Exercise 3                                                         | 80     |
